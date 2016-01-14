@@ -48,11 +48,7 @@ public class InputManager : MonoBehaviour {
     public InputAxisState[] inputs;
     public InputState inputState;
 
-//    private GameObject inputStateObject;
 
-    void Awake() {
-
-    }
 
 	// Update is called once per frame
 	void Update () {
@@ -63,11 +59,6 @@ public class InputManager : MonoBehaviour {
         }
 	
 	}
-  
-    //Attempt to auto assign InputState
- //   public void SetInputState() {
- //       inputState = GameObject.FindGameObjectWithTag("Player").GetComponent<InputState>();
- //   }
 
 
 }

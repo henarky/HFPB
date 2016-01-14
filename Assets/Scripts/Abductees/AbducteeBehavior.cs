@@ -9,11 +9,13 @@ public abstract class AbducteeBehavior : MonoBehaviour {
 //    protected InputState inputState;
     protected Rigidbody2D abductBody2d;
     protected CollisionState abductCollisionState;
+    protected BoxCollider2D boxCollider;
 
     protected virtual void Awake() {
 //        inputState = GetComponent<InputState>();
         abductBody2d = GetComponent<Rigidbody2D>();
         abductCollisionState = GetComponent<CollisionState>();
+        boxCollider = GetComponent<BoxCollider2D>();
 
     }
 

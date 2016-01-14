@@ -5,7 +5,7 @@ public class FireTractorBeam : AbstractBehavior {
 
     public float shootDelay = .5f;
     public GameObject projectilePrefab;
-    public Vector2 firePosition = Vector2.zero;
+    public Vector3 firePosition = Vector3.zero;
     public Color debugColor = Color.green;
     public float debugRadius = 3;
 
@@ -26,19 +26,23 @@ public class FireTractorBeam : AbstractBehavior {
         }
 	}
 
-    Vector2 CalculateFirePosition() {
+    Vector3 CalculateFirePosition() {
         var pos = firePosition;
-        pos.x *= (float)inputState.direction;
+//        pos.x *= (float)inputState.direction;
         pos.x += transform.position.x;
         pos.y += transform.position.y;
+        pos.z += projectilePrefab.transform.position.z;
 
         return pos;
 
     }
 
-    public void CreateProjectile(Vector2 pos) {
+
+
+    public void CreateProjectile(Vector3 pos) {
+
         var clone = Instantiate(projectilePrefab, pos, Quaternion.identity) as GameObject;
-        clone.transform.localScale = transform.localScale; 
+        clone.transform.localScale = projectilePrefab.transform.localScale;
     }
 
     void OnDrawGizmos() {
