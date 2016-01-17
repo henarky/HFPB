@@ -8,12 +8,14 @@ public class FireTractorBeam : AbstractBehavior {
     public Vector3 firePosition = Vector3.zero;
     public Color debugColor = Color.green;
     public float debugRadius = 3;
+	public bool canBeam = false;
+
 
     private float timeElapsed = 0f;
 	
 	// Update is called once per frame
 	void Update () {
-        if (projectilePrefab != null) {
+		if (projectilePrefab != null && canBeam == true) {
 
             var canFire = inputState.GetButtonValue(inputButtons[0]);
 

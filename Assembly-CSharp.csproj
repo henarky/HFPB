@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\Behavior\Fly.cs" />
      <Compile Include="Assets\Scripts\Behavior\PickUpTractor.cs" />
      <Compile Include="Assets\Scripts\Behavior\SimpleMovement.cs" />
+     <Compile Include="Assets\Scripts\Behavior\UFODescent.cs" />
      <Compile Include="Assets\Scripts\Camera\PixelPerfectCamera.cs" />
      <Compile Include="Assets\Scripts\Collision\Collectable.cs" />
      <Compile Include="Assets\Scripts\Collision\CollisionState.cs" />
